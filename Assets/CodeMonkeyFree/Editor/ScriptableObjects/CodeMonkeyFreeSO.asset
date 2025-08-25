@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1755988905
+  lastShownTimestamp: 1756151111
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1755988905
+  checkedLastUpdateTimestamp: 1756151111
   lastQOTDResponse:
     questionId: 214
     questionText: 'What is the position of the transform after running this code?
@@ -35,7 +35,7 @@ MonoBehaviour:
     answerC: Unknown
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1755988905
+  lastQotdTimestamp: 1756151111
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle_EndsTomorrow.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ENDS TOMORROW!
@@ -43,19 +43,19 @@ MonoBehaviour:
     bottomText: Get my Code Monkey Toolkit and make games BETTER and FASTER! 50%
       OFF right now!
     bottomLink: toolkit
-  lastDynamicHeaderTimestamp: 1755988905
+  lastDynamicHeaderTimestamp: 1756151111
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1755988905
+  websiteLatestMessageTimestamp: 1756151111
   websiteLatestVideos:
     videos:
+    - youTubeId: _fymNH4flZE
+      title: TOP 10 NEW Systems and Tools AUGUST 2025! | Unity Asset Store
     - youTubeId: YCvh88Hg5m8
       title: TOP 8 QUICK Tips on Game Programming!
     - youTubeId: Lgmv7PYKka8
       title: Does this AI FINALLY replace Game Devs? Should YOU worry?
     - youTubeId: x4BTbeKinSI
       title: TOP 10 FREE NEW Assets AUGUST 2025!
-    - youTubeId: HZ48JOAf-Ko
-      title: Did I STOP making TUTORIALS?
-  websiteLatestVideosTimestamp: 1755988905
+  websiteLatestVideosTimestamp: 1756151111

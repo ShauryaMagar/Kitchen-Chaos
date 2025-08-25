@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     //always make the variables private to ensure that only the class they belong to can make changes to it
     //adding serializableField ensures that we can change the value while on the scene screen
     [SerializeField] private float moveSpeed = 7f;
+    private bool isWalking;
     private void Update()
     {
         Vector2 inputVector = new Vector2(0, 0);
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         //inputVector
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         //deltaTime changes the speed based on the refresh rate of the screen.
+        isWalking = moveDir != Vector3.zero;
         transform.position += moveDir*Time.deltaTime*moveSpeed;
 
         float rotateSpeed = 10f;
@@ -41,5 +43,9 @@ public class Player : MonoBehaviour
         //Slerp has 3 args. First to where it begins, then where it should end, and Time.deltaTime to tell it should move smooth
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime*rotateSpeed);  
         Debug.Log(inputVector);
+    }
+    public bool IsWalking()
+    {
+        return isWalking;
     }
 }
