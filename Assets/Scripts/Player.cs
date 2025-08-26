@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,44 @@ public class Player : MonoBehaviour
     // A LayerMask that tells Unity which layers the interaction raycast should detect (e.g., counters, interactable objects)
     [SerializeField] private LayerMask countersLayersMask;
 
+    //This defines a static property called Instance. it belongs to the class itself, not a specific object. There will only ever be one Instance reference shared across the game.
+    //other scripts can read it, but only this class can assign it.
+    public static Player Instance { get; private set; }
+
+    public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
+    public class OnSelectedCounterChangedEventArgs : EventArgs
+    {
+        public ClearCounter selectedCounter;
+    }
+
+    private ClearCounter selectedCounter;
+
     private Vector3 lastInteraction;
+
+    //It is called when the script instance is loaded, before Start() and before the first frame update.
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Debug.LogError("There are more than one instance");
+        }
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+    }
+
+    private void GameInput_OnInteractAction(object sender, System.EventArgs e)
+    {
+        if (selectedCounter != null)
+        {
+            selectedCounter.Interact();
+        }
+
+    }
+
     private void Update()
     {
         HandleMovement(); 
@@ -52,14 +90,29 @@ public class Player : MonoBehaviour
             // (TryGetComponent returns true if found, false otherwise, and assigns the component if successful)
             if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
             {
-                //Hit a clearCounter
-                clearCounter.Interact();
+                if(clearCounter != selectedCounter)
+                {
+                    SetSelectedCounter(clearCounter);
+                }
             }
-        }
-        else
+            else
+            {
+                SetSelectedCounter(null);
+            }
+        }else
         {
-
+            SetSelectedCounter(null);
         }
+    }
+
+    private void SetSelectedCounter(ClearCounter selectedCounter)
+    {
+        this.selectedCounter = selectedCounter;
+        OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs
+        {
+            selectedCounter = selectedCounter
+        });
+
     }
 
     private void HandleMovement()

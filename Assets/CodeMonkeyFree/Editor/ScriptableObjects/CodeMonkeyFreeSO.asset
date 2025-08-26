@@ -14,28 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1756151111
+  lastShownTimestamp: 1756239259
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1756151111
+  checkedLastUpdateTimestamp: 1756239259
   lastQOTDResponse:
-    questionId: 214
-    questionText: 'What is the position of the transform after running this code?
-
-      <p>Vector3
-      targetPosition = new Vector3(10, 0, 0);</p>
-
-      <p>transform.position =
-      targetPosition;</p>
-
-      <p>targetPosition.x = 20;</p>'
-    answerA: (10, 0, 0)
-    answerB: (20, 0, 0)
-    answerC: Unknown
+    questionId: 215
+    questionText: What will happen on January 19, 2038 at 03:14:07?
+    answerA: Armagedon
+    answerB: End of Unix Time
+    answerC: Half-Life 3 release date
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1756151111
+  lastQotdTimestamp: 1756239259
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle_EndsTomorrow.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ENDS TOMORROW!
@@ -43,19 +35,19 @@ MonoBehaviour:
     bottomText: Get my Code Monkey Toolkit and make games BETTER and FASTER! 50%
       OFF right now!
     bottomLink: toolkit
-  lastDynamicHeaderTimestamp: 1756151111
+  lastDynamicHeaderTimestamp: 1756239259
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1756151111
+  websiteLatestMessageTimestamp: 1756239259
   websiteLatestVideos:
     videos:
+    - youTubeId: FrKLJ1nCsxY
+      title: Indie Dev makes $4 MILLION... then goes broke!
     - youTubeId: _fymNH4flZE
       title: TOP 10 NEW Systems and Tools AUGUST 2025! | Unity Asset Store
     - youTubeId: YCvh88Hg5m8
       title: TOP 8 QUICK Tips on Game Programming!
     - youTubeId: Lgmv7PYKka8
       title: Does this AI FINALLY replace Game Devs? Should YOU worry?
-    - youTubeId: x4BTbeKinSI
-      title: TOP 10 FREE NEW Assets AUGUST 2025!
-  websiteLatestVideosTimestamp: 1756151111
+  websiteLatestVideosTimestamp: 1756239259
